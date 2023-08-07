@@ -1,0 +1,15 @@
+//   MainTrackWidget(
+                    // title: 'Featured Playlists',
+                    // data: _featuredPlaylists,
+                       
+                    //   ),
+                    //   MainTrackWidget(
+                    // title: 'Recommendations',
+                    // data: _recommendations,
+                       
+                    //   ),
+                    //   MainTrackWidget(
+                    // title: 'Featured Playlists',
+                    // data: _featuredPlaylists,
+                       
+                    //   ),
