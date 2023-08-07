@@ -15,7 +15,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     Tab(text: 'Music'),
     Tab(text: 'Podcasts & Shows'),
   ];
-
+  Future<void> _loadContent() async {
+    // Perform any asynchronous loading tasks here
+    // For example, fetching data from an API or loading other resources
+    await Future.delayed(Duration(seconds: 2));
+  }
   @override
   void initState() {
     super.initState();
@@ -126,24 +130,57 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 20),
-          child: TabBarView(
-            controller: _tabController, // Use the TabController here
-            children: [
-              ListView(
-                children: [
-                  MainTrackWidget(
-                    title: 'Featured Playlists',
-                  ),
-                  MainTrackWidget(
-                    title: 'Recommendations',
-                  ),
-                ],
-              ),
-              MainPodcastWidget(),
-            ],
+          child: FutureBuilder(
+            future: _loadContent(), // Use the future method here
+            builder: (context, snapshot) {
+              // Check the connection state of the future
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                // While data is loading, display the circular progress indicator
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else {
+                // Data is loaded, display the content
+                return TabBarView(
+                  controller: _tabController, // Use the TabController here
+                  children: [
+                    ListView(
+                      children: [
+                        MainTrackWidget(
+                          title: 'Featured Playlists',
+                          url: ApiEndPoints.recommendations1,
+                        ),
+                        MainTrackWidget(
+                          title: 'Featured Playlists',
+                          url: ApiEndPoints.featuredPlaylists,
+                        ),
+                        MainTrackWidget(
+                          title: 'Featured Playlists',
+                          url: ApiEndPoints.recommendations2,
+                        ),
+                        MainTrackWidget(
+                          title: 'Featured Playlists',
+                          url: ApiEndPoints.recommendations3,
+                        ),
+                        MainTrackWidget(
+                          title: 'Featured Playlists',
+                          url: ApiEndPoints.recommendations4,
+                        ),
+                        MainTrackWidget(
+                          title: 'Featured Playlists',
+                          url: ApiEndPoints.recommendations5,
+                        ),
+                      ],
+                    ),
+                    MainPodcastWidget(),
+                  ],
+                );
+              }
+            },
           ),
         ),
       ),
     );
   }
 }
+      

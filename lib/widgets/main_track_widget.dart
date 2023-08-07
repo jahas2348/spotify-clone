@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/domain/api_endpoints.dart';
 import 'package:spotify_clone/infrastructure/base_client.dart';
 import 'package:spotify_clone/models/track_info.dart';
 
 class MainTrackWidget extends StatefulWidget {
   final String title;
+  final String url;
   final List<SpotifyTrack>? data;
 
-  MainTrackWidget({required this.title, this.data});
+  MainTrackWidget({required this.title, this.data, required this.url});
 
   @override
   _MainTrackWidgetState createState() => _MainTrackWidgetState();
@@ -29,7 +29,7 @@ class _MainTrackWidgetState extends State<MainTrackWidget>
   Future<List<SpotifyTrack>> fetchItemsToScreen() async {
     try {
       List<SpotifyTrack> fetchedData =
-          await SpotifyApiService.fetchTrackItems(ApiEndPoints.recommendations);
+          await SpotifyApiService.fetchTrackItems(widget.url);
       return fetchedData;
     } catch (e) {
       print('Error occurred while fetching items: $e');
@@ -46,13 +46,13 @@ class _MainTrackWidgetState extends State<MainTrackWidget>
           ? Center(
               child: widget.data != null
                   ? _buildTrackWidget(widget.data!)
-                  : CircularProgressIndicator(),
+                  : Container(),
             )
           : FutureBuilder<List<SpotifyTrack>>(
               future: _dataFuture,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(child: CircularProgressIndicator());
+                  return Center(child: Container());
                 } else if (snapshot.hasError) {
                   return Center(
                       child: Text('Error occurred while fetching items'));

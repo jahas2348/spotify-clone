@@ -131,33 +131,43 @@ class _SearchScreenState extends State<SearchScreen> {
                   children: [
                     SearchGridItemWidget(
                       title: 'Podcasts',
-                      assetImage: 'assets/images/cover-image-2.jpeg',
+                      assetImage: 'assets/images/cover-image-1.jpeg',
                       bgColor: Color(0xFFE13300),
                     ),
                     SearchGridItemWidget(
                       title: 'Live Events',
-                      assetImage: 'assets/images/cover-image-3.jpeg',
+                      assetImage: 'assets/images/cover-image-2.jpeg',
                       bgColor: Color(0xFF7358FF),
                     ),
                     SearchGridItemWidget(
                       title: 'Made For You',
-                      assetImage: 'assets/images/cover-image-4.jpeg',
+                      assetImage: 'assets/images/cover-image-3.jpeg',
                       bgColor: Color(0xFF1E3264),
                     ),
                     SearchGridItemWidget(
                       title: 'New Releases',
-                      assetImage: 'assets/images/cover-image-2.jpeg',
+                      assetImage: 'assets/images/cover-image-4.jpeg',
                       bgColor: Color(0xFFE8125C),
                     ),
                     SearchGridItemWidget(
                       title: 'Hindi',
-                      assetImage: 'assets/images/cover-image-3.jpeg',
+                      assetImage: 'assets/images/cover-image-5.jpeg',
                       bgColor: Color(0xFFE9142A),
                     ),
                     SearchGridItemWidget(
                       title: 'Punjabi',
-                      assetImage: 'assets/images/cover-image-4.jpeg',
+                      assetImage: 'assets/images/cover-image-1.jpeg',
                       bgColor: Color(0xFFB02897),
+                    ),
+                    SearchGridItemWidget(
+                      title: 'Punjabi',
+                      assetImage: 'assets/images/cover-image-2.jpeg',
+                      bgColor: Color(0xFF1E3264),
+                    ),
+                    SearchGridItemWidget(
+                      title: 'Punjabi',
+                      assetImage: 'assets/images/cover-image-3.jpeg',
+                      bgColor: Color(0xFF7358FF),
                     ),
                     // Add more GridItemWidgets for additional items if needed
                   ],

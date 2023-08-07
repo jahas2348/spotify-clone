@@ -21,14 +21,15 @@ class SPotifyPodcast {
         ? images[0]['url'] as String
         : 'default_cover_image_url';
 
-    final genresList = json['genres'] as List<dynamic>?; // Handle the genres list
-    final genres = genresList?.cast<String>().join(', ') ?? 'Unknown'; // Convert list to a string
+    // final genresList = json['genres'] as List<dynamic>?; // Handle the genres list
+    // final genres = genresList?.cast<String>().join(', ') ?? 'Unknown'; // Convert list to a string
 
     return SPotifyPodcast(
       coverImagePath,
       json['name'] as String? ?? 'Unknown',
       json['album_type'] as String? ?? 'Unknown', // Use album_type instead of type
-      genres,
+      json['release_date'] as String?  ?? 'Test',
+
       artistName,
     );
   }

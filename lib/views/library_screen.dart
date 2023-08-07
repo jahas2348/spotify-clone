@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/core/styles/colors.dart';
-import 'package:spotify_clone/models/search_grid_category.dart';
 
 class LibraryScreen extends StatefulWidget {
   const LibraryScreen({super.key});
