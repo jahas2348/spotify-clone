@@ -160,14 +160,24 @@ class _SearchScreenState extends State<SearchScreen> {
                       bgColor: Color(0xFFB02897),
                     ),
                     SearchGridItemWidget(
-                      title: 'Punjabi',
+                      title: 'Tamil',
                       assetImage: 'assets/images/cover-image-2.jpeg',
-                      bgColor: Color(0xFF1E3264),
+                      bgColor: Color(0xFFA46752),
                     ),
                     SearchGridItemWidget(
-                      title: 'Punjabi',
+                      title: 'Telugu',
                       assetImage: 'assets/images/cover-image-3.jpeg',
-                      bgColor: Color(0xFF7358FF),
+                      bgColor: Color(0xFFD84000),
+                    ),
+                    SearchGridItemWidget(
+                      title: 'Charts',
+                      assetImage: 'assets/images/cover-image-1.jpeg',
+                      bgColor: Color(0xFF8D68AB),
+                    ),
+                    SearchGridItemWidget(
+                      title: 'Pop',
+                      assetImage: 'assets/images/cover-image-2.jpeg',
+                      bgColor: Color(0xFF15890A),
                     ),
                     // Add more GridItemWidgets for additional items if needed
                   ],

@@ -22,4 +22,4 @@ class CustomColors {
   // static const Color accentColor = Color(0xFF9C27B0);
   // static const Color textColor = Color(0xFF333333);
 }
-const Color bgPrimary = Color(0xFF121212);
+const Color bgPrimary = Color(0xFF090909);
