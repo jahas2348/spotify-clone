@@ -147,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ListView(
                       children: [
                         MainTrackWidget(
-                          title: 'Featured Playlists',
+                          title: 'Recommendations',
                           url: ApiEndPoints.recommendations1,
                         ),
                         MainTrackWidget(
@@ -155,19 +155,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           url: ApiEndPoints.featuredPlaylists,
                         ),
                         MainTrackWidget(
-                          title: 'Featured Playlists',
+                          title: 'Trending',
                           url: ApiEndPoints.recommendations2,
                         ),
                         MainTrackWidget(
-                          title: 'Featured Playlists',
+                          title: 'Made For You',
                           url: ApiEndPoints.recommendations3,
                         ),
                         MainTrackWidget(
-                          title: 'Featured Playlists',
+                          title: 'New Releases',
                           url: ApiEndPoints.recommendations4,
                         ),
                         MainTrackWidget(
-                          title: 'Featured Playlists',
+                          title: 'Recently Played',
                           url: ApiEndPoints.recommendations5,
                         ),
                       ],
