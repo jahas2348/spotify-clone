@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/views/navigation.dart';
 import 'package:spotify_clone/core/styles/colors.dart';
-void main(){
+
+void main() {
   runApp(SpotifyClone());
 }
+
 class SpotifyClone extends StatelessWidget {
   const SpotifyClone({super.key});
 
@@ -12,9 +14,10 @@ class SpotifyClone extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: NavigationItems(),
-       
       darkTheme: ThemeData(
-        progressIndicatorTheme: ProgressIndicatorThemeData(color: CustomColors.primaryColor.shade100,circularTrackColor: CustomColors.primaryColor),
+        progressIndicatorTheme: ProgressIndicatorThemeData(
+            color: CustomColors.primaryColor.shade100,
+            circularTrackColor: CustomColors.primaryColor),
         brightness: Brightness.dark, // Use the dark theme
         fontFamily: 'circular', // Set your custom font here
         primaryColor: CustomColors.primaryColor,
@@ -23,7 +26,6 @@ class SpotifyClone extends StatelessWidget {
         hintColor: CustomColors.primaryColor,
         scaffoldBackgroundColor: bgPrimary,
       ),
-       
     );
   }
 }
